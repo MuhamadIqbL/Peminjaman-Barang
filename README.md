@@ -1,23 +1,55 @@
 # peminjaman--barang
 
-## Project setup
+
 ```
-npm install
+vue create peminjaman-barang
 ```
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
+? Please pick a preset:
+    Default ([Vue 2] babel, eslint)
+  > Default (Vue 3 Preview) ([Vue 3] babel, eslint)
+    Manually select features
+```
+### Install Vuetify3 + vite
+```
+cd peminjaman-barang
+vue add vuetify
 ```
 
-### Compiles and minifies for production
 ```
-npm run build
+? Choose a preset: (Use arrow keys)
+  Default (recommended)
+  Prototype (rapid development)
+  Configure (advanced)
+> v3 (alpha)
+____________________________________
+Note : v3+vite
+```
+### Install Vue Router Js
+```
+cd peminjaman-barang
+vue add router
 ```
 
-### Lints and fixes files
+### Install Fake Json-Server API
 ```
-npm run lint
+cd peminjaman-barang
+vue add -g json-server
+
+atau
+
+npm install -g json-server
+```
+
+### CMD 1
+```
+npm run server
+```
+
+### CMD 2
+```
+npm run api
 ```
 
 ### Customize configuration
