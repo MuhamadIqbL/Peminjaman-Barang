@@ -6,8 +6,8 @@ const path = require('path')
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/Peminjaman-Barang/',
   plugins: [
-    base: '/Peminjaman-Barang/',
     vue(),
     // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
     vuetify({

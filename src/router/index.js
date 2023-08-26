@@ -8,11 +8,6 @@ const routes = [
     component: () => import("../views/Login.vue"),
   },
   {
-    path: "/coba",
-    name: "coba",
-    component: () => import("../views/AboutView.vue"),
-  },
-  {
     path: '/Dashboard',
     component: Layout,
     redirect: '/Dashboard',
