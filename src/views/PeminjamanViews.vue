@@ -410,7 +410,7 @@ export default {
     // Method Get Data Peminjaman
     GetData() {
       //Peminjaman
-      fetch("http://localhost:3000/peminjaman/")
+      fetch("https://fake-json-api.vercel.app/peminjaman/")
         .then((response) => response.json())
         .then((data) => {
           this.peminjaman = data;
@@ -428,7 +428,7 @@ export default {
           console.error(err);
         });
       //Pengembalian
-      fetch("http://localhost:3000/pengembalian")
+      fetch("https://fake-json-api.vercel.app/pengembalian")
         .then((response) => response.json())
         .then((data) => {
           this.pengembalian = data;
@@ -438,7 +438,7 @@ export default {
           console.error(err);
         });
       //Barang
-      fetch("http://localhost:3000/barang/")
+      fetch("https://fake-json-api.vercel.app/barang/")
         .then((response) => response.json())
         .then((data) => {
           this.item_barang = data;
@@ -447,7 +447,7 @@ export default {
           console.error(err);
         });
       //Operator
-      fetch("http://localhost:3000/operator/")
+      fetch("https://fake-json-api.vercel.app/operator/")
         .then((response) => response.json())
         .then((data) => {
           this.item_operator = data;
@@ -467,7 +467,7 @@ export default {
       this.form.jurusan_peminjam = peminjaman.jurusan_peminjam;
       this.form.tanggal_pinjam = peminjaman.tanggal_pinjam;
       this.form.status = peminjaman.status;
-      fetch("http://localhost:3000/barang/?nama_brg=" + peminjaman.nama_brg)
+      fetch("https://fake-json-api.vercel.app/barang/?nama_brg=" + peminjaman.nama_brg)
         .then((response) => response.json())
         .then((data) => {
           this.barang = data[0];
@@ -501,7 +501,7 @@ export default {
         body: urlencoded,
       };
       // Last Request
-      fetch("http://localhost:3000/peminjaman/" + form.id, requestOptions)
+      fetch("https://fake-json-api.vercel.app/peminjaman/" + form.id, requestOptions)
         .then((response) => {
           console.log(response.statusText);
           this.EditAddOk = true;
@@ -547,13 +547,13 @@ export default {
         body: urlencoded,
       };
       // Last Request
-      fetch("http://localhost:3000/peminjaman/", requestOptions)
+      fetch("https://fake-json-api.vercel.app/peminjaman/", requestOptions)
         .then((response) => {
           console.log(response.statusText);
           this.EditAddOk = true;
           this.GetData();
           // Get Data Barang Yang Akan di Update Stock
-          fetch("http://localhost:3000/barang/?nama_brg=" + nama_barang)
+          fetch("https://fake-json-api.vercel.app/barang/?nama_brg=" + nama_barang)
             .then((response) => response.json())
             .then((data) => {
               this.barang = data[0];
@@ -581,7 +581,7 @@ export default {
         method: "DELETE",
       };
       // Last Request
-      fetch("http://localhost:3000/peminjaman/" + id, requestOptions)
+      fetch("https://fake-json-api.vercel.app/peminjaman/" + id, requestOptions)
         .then((response) => {
           console.log(response.statusText);
           this.GetData();
@@ -624,7 +624,7 @@ export default {
         body: urlencoded,
       };
       // Last Request
-      fetch("http://localhost:3000/pengembalian/", requestOptions)
+      fetch("https://fake-json-api.vercel.app/pengembalian/", requestOptions)
         .then((response) => {
           console.log(response.statusText);
           this.GetData();
@@ -654,7 +654,7 @@ export default {
         body: urlencoded,
       };
       // Last Request
-      fetch("http://localhost:3000/barang/" + form_brg.id, requestOptions)
+      fetch("https://fake-json-api.vercel.app/barang/" + form_brg.id, requestOptions)
         .then((response) => {
           console.log(response.statusText);
           this.EditAddOk = true;
@@ -685,7 +685,7 @@ export default {
         body: urlencoded,
       };
       // Last Request
-      fetch("http://localhost:3000/barang/" + form_brg.id, requestOptions)
+      fetch("https://fake-json-api.vercel.app/barang/" + form_brg.id, requestOptions)
         .then((response) => {
           console.log(response.statusText);
           this.EditAddOk = true;

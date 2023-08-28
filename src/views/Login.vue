@@ -99,13 +99,13 @@
         const password = this.password;
         const uname = this.uname
         const pass = this.pass
-        fetch("http://localhost:3000/admin/?username=" + username)
+        fetch("https://fake-json-api.vercel.app/admin/?username=" + username)
           .then((response) => response.json())
           .then((data) => {
               const a = data[0];
               this.uname = a.username
             // cek password
-            fetch("http://localhost:3000/operator/?password=" + password)
+            fetch("https://fake-json-api.vercel.app/operator/?password=" + password)
               .then((response) => response.json())
               .then((data) => {
                 const b = data[0];

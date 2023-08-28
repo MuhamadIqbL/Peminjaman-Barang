@@ -114,7 +114,7 @@ export default {
   },
   methods: {
     redirecLogout() {
-      this.$router.push("/");
+      this.$router.push("/Peminjaman-Barang/");
     },
   },
 };

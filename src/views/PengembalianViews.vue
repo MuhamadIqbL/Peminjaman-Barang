@@ -261,7 +261,7 @@ export default {
   methods: {
     // Method Get Data Pengembalian
     GetData() {
-      fetch("http://localhost:3000/pengembalian")
+      fetch("https://fake-json-api.vercel.app/pengembalian")
         .then((response) => response.json())
         .then((data) => {
           this.pengembalian = data;
@@ -269,14 +269,14 @@ export default {
         .catch((err) => {
           console.error(err);
         });
-        fetch("http://localhost:3000/barang")
+        fetch("https://fake-json-api.vercel.app/barang")
         .then((response) => response.json())
         .then((data) => {
           this.item_barang = data;
         })
         .catch((err) => {
           console.error(err);
-        });fetch("http://localhost:3000/operator")
+        });fetch("https://fake-json-api.vercel.app/operator")
         .then((response) => response.json())
         .then((data) => {
           this.item_operator = data;
@@ -318,7 +318,7 @@ export default {
         body: urlencoded,
       };
       // Last Request
-      fetch("http://localhost:3000/pengembalian/" + form.id, requestOptions)
+      fetch("https://fake-json-api.vercel.app/pengembalian/" + form.id, requestOptions)
         .then((response) => {
           console.log(response.statusText);
           this.EditAddOk = true;
@@ -338,7 +338,7 @@ export default {
         method: "DELETE",
       };
       // Last Request
-      fetch("http://localhost:3000/pengembalian/" + id, requestOptions)
+      fetch("https://fake-json-api.vercel.app/pengembalian/" + id, requestOptions)
         .then((response) => {
           console.log(response.statusText);
           this.GetData();

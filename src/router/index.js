@@ -3,7 +3,7 @@ import Layout from '../layout/index.vue'
 
 const routes = [
   {
-    path: "/",
+    path: "/Peminjaman-Barang/",
     name: "login",
     component: () => import("../views/Login.vue"),
   },

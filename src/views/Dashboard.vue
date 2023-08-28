@@ -92,7 +92,7 @@ export default {
     // Method Get Data
     GetData() {
       //Barang
-      fetch("http://localhost:3000/barang")
+      fetch("https://fake-json-api.vercel.app/barang")
         .then((response) => response.json())
         .then((data) => {
           this.totalbarang = data.length;
@@ -101,7 +101,7 @@ export default {
           console.error(err);
         });
       //Peminjaman
-      fetch("http://localhost:3000/peminjaman")
+      fetch("https://fake-json-api.vercel.app/peminjaman")
         .then((response) => response.json())
         .then((data) => {
           this.totalpeminjaman = data.length;
@@ -110,7 +110,7 @@ export default {
           console.error(err);
         });
       //Pengembalian
-      fetch("http://localhost:3000/pengembalian")
+      fetch("https://fake-json-api.vercel.app/pengembalian")
         .then((response) => response.json())
         .then((data) => {
           this.totalpengembalian = data.length;

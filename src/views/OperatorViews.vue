@@ -249,7 +249,7 @@ export default {
   methods: {
     // Method Get Data operator
     GetData() {
-      fetch("http://localhost:3000/operator")
+      fetch("https://fake-json-api.vercel.app/operator")
         .then((response) => response.json())
         .then((data) => {
           this.operator = data;
@@ -281,7 +281,7 @@ export default {
         body: urlencoded,
       };
       // Last Request
-      fetch("http://localhost:3000/operator/" + form.id, requestOptions)
+      fetch("https://fake-json-api.vercel.app/operator/" + form.id, requestOptions)
         .then((response) => {
           console.log(response.statusText);
           this.EditAddOk = true;
@@ -312,7 +312,7 @@ export default {
         body: urlencoded,
       };
       // Last Request
-      fetch("http://localhost:3000/operator/", requestOptions)
+      fetch("https://fake-json-api.vercel.app/operator/", requestOptions)
         .then((response) => {
           console.log(response.statusText);
           this.EditAddOk = true;
@@ -332,7 +332,7 @@ export default {
         method: "DELETE",
       };
       // Last Request
-      fetch("http://localhost:3000/operator/" + id, requestOptions)
+      fetch("https://fake-json-api.vercel.app/operator/" + id, requestOptions)
         .then((response) => {
           console.log(response.statusText);
           this.GetData();

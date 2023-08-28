@@ -272,7 +272,7 @@ export default {
   methods: {
     // Method Get Data Barang
     GetData() {
-      fetch("http://localhost:3000/barang")
+      fetch("https://fake-json-api.vercel.app/barang")
         .then((response) => response.json())
         .then((data) => {
           this.product = data;
@@ -307,7 +307,7 @@ export default {
         body: urlencoded,
       };
       // Last Request
-      fetch("http://localhost:3000/barang/" + form.id, requestOptions)
+      fetch("https://fake-json-api.vercel.app/barang/" + form.id, requestOptions)
         .then((response) => {
           console.log(response.statusText);
           this.EditAddOk = true;
@@ -338,7 +338,7 @@ export default {
         body: urlencoded,
       };
       // Last Request
-      fetch("http://localhost:3000/barang/", requestOptions)
+      fetch("https://fake-json-api.vercel.app/barang/", requestOptions)
         .then((response) => {
           console.log(response.statusText);
           this.EditAddOk = true;
@@ -358,7 +358,7 @@ export default {
         method: "DELETE",
       };
       // Last Request
-      fetch("http://localhost:3000/barang/" + id, requestOptions)
+      fetch("https://fake-json-api.vercel.app/barang/" + id, requestOptions)
         .then((response) => {
           console.log(response.statusText);
           this.GetData();
